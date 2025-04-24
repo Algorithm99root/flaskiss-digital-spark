@@ -4,23 +4,37 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
   const fullText = "AI that Powers Your Digital World";
 
   useEffect(() => {
     let currentText = '';
     let index = 0;
+    
     const typingTimer = setInterval(() => {
-      if (index < fullText.length) {
-        currentText += fullText[index];
-        setDisplayText(currentText);
-        index++;
+      if (!isDeleting) {
+        if (index < fullText.length) {
+          currentText = fullText.slice(0, index + 1);
+          setDisplayText(currentText);
+          index++;
+        } else {
+          setIsDeleting(true);
+          index = fullText.length;
+        }
       } else {
-        clearInterval(typingTimer);
+        if (index > 0) {
+          currentText = fullText.slice(0, index - 1);
+          setDisplayText(currentText);
+          index--;
+        } else {
+          setIsDeleting(false);
+          index = 0;
+        }
       }
-    }, 50); // Adjust speed of typing here
+    }, 100); // Adjust typing speed here (milliseconds)
 
     return () => clearInterval(typingTimer);
-  }, []);
+  }, [isDeleting]);
 
   return (
     <div className="relative overflow-hidden bg-hero-pattern pt-16 pb-24 md:pt-24 md:pb-32">
