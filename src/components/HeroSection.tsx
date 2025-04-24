@@ -1,8 +1,27 @@
-
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
+  const [displayText, setDisplayText] = useState('');
+  const fullText = "AI that Powers Your Digital World";
+
+  useEffect(() => {
+    let currentText = '';
+    let index = 0;
+    const typingTimer = setInterval(() => {
+      if (index < fullText.length) {
+        currentText += fullText[index];
+        setDisplayText(currentText);
+        index++;
+      } else {
+        clearInterval(typingTimer);
+      }
+    }, 50); // Adjust speed of typing here
+
+    return () => clearInterval(typingTimer);
+  }, []);
+
   return (
     <div className="relative overflow-hidden bg-hero-pattern pt-16 pb-24 md:pt-24 md:pb-32">
       {/* Decorative elements */}
@@ -12,7 +31,8 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-flaskiss-primary to-flaskiss-accent bg-clip-text text-transparent">
-            AI that Powers Your Digital World
+            {displayText}
+            <span className="animate-pulse text-flaskiss-primary">|</span>
           </h1>
           <p className="text-lg md:text-xl text-flaskiss-text mb-8 leading-relaxed">
             Flaskiss delivers intelligent AI-driven services for startups, developers, 
