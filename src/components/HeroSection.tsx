@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Telegram } from "lucide-react";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
@@ -59,11 +61,48 @@ const HeroSection = () => {
               <Link to="/services">Explore Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-flaskiss-primary text-flaskiss-primary hover:bg-flaskiss-primary/10">
-              <Link to="/chat">Start a Chat</Link>
+              <Link to="/upgrade">Get Started</Link>
             </Button>
           </div>
           
-          <div className="mt-16 animate-float">
+          {/* Telegram join animation */}
+          <div className="mt-16 mb-8 animate-float">
+            <div className="relative max-w-md mx-auto p-6 rounded-xl overflow-hidden bg-gradient-to-r from-[#2AABEE]/90 to-[#229ED9]/90 text-white backdrop-blur-sm shadow-xl transform transition-all hover:scale-105 cursor-pointer">
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
+              <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-white/10 rounded-full"></div>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2">Join Our Community</h3>
+                  <p className="mb-4 text-white/90">Get updates, tips, and connect with other Flaskiss users!</p>
+                  
+                  <a 
+                    href="https://t.me/flaskiss" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 bg-white text-[#229ED9] px-4 py-2 rounded-md font-semibold hover:bg-white/90 transition-colors"
+                  >
+                    <Telegram className="h-5 w-5" />
+                    Join on Telegram
+                  </a>
+                </div>
+                
+                <div className="hidden md:flex items-center justify-center animate-pulse-slow">
+                  <Telegram className="h-24 w-24 text-white/90" />
+                </div>
+              </div>
+              
+              <div className="absolute bottom-2 right-2">
+                <div className="flex gap-1">
+                  <div className="h-2 w-2 rounded-full bg-white animate-pulse"></div>
+                  <div className="h-2 w-2 rounded-full bg-white animate-pulse delay-100"></div>
+                  <div className="h-2 w-2 rounded-full bg-white animate-pulse delay-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 animate-float">
             <div className="relative w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/30 bg-white/90 backdrop-blur-sm">
               <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-flaskiss-primary/20 to-flaskiss-accent/20 flex items-center px-4">
                 <div className="flex space-x-2">
