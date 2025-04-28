@@ -88,6 +88,14 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  --ghostrootkit-primary: var(--primary);
+  --ghostrootkit-secondary: var(--secondary);
+  --ghostrootkit-accent: var(--accent);
+  --ghostrootkit-text: var(--foreground);
+  --ghostrootkit-muted: var(--muted);
+  --ghostrootkit-light: var(--background);
+  --ghostrootkit-dark: 240 10% 3.9%;
 }
 
 @layer base {

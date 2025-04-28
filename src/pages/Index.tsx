@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/NavBar";
@@ -31,19 +30,19 @@ const Index = () => {
   const testimonials = [
     {
       quote:
-        "Flaskiss transformed our digital marketing strategy with their AI-powered SEO tools. We've seen a 40% increase in organic traffic.",
+        "GhostRootkit transformed our digital marketing strategy with their AI-powered SEO tools. We've seen a 40% increase in organic traffic.",
       author: "Maria Rodriguez",
       company: "TechStart Inc.",
     },
     {
       quote:
-        "The custom automation scripts developed by Flaskiss have saved our team countless hours of manual work. Highly recommended!",
+        "The custom automation scripts developed by GhostRootkit have saved our team countless hours of manual work. Highly recommended!",
       author: "David Chen",
       company: "Innovate Solutions",
     },
     {
       quote:
-        "Working with Flaskiss was a game-changer for our startup. Their AI tools helped us compete with much larger companies in our space.",
+        "Working with GhostRootkit was a game-changer for our startup. Their AI tools helped us compete with much larger companies in our space.",
       author: "Sarah Johnson",
       company: "GrowthLab",
     },
@@ -57,13 +56,13 @@ const Index = () => {
         <HeroSection />
         
         {/* Features Section */}
-        <section className="py-20 bg-flaskiss-light">
+        <section className="py-20 bg-ghostrootkit-light">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-flaskiss-text mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-ghostrootkit-text mb-4">
                 Our AI-Powered Services
               </h2>
-              <p className="text-flaskiss-muted max-w-2xl mx-auto">
+              <p className="text-ghostrootkit-muted max-w-2xl mx-auto">
                 Transforming businesses with intelligent digital solutions that deliver real results.
               </p>
             </div>
@@ -74,15 +73,15 @@ const Index = () => {
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center"
                 >
-                  <div className="p-3 bg-flaskiss-primary/10 rounded-full mb-6">
-                    <feature.icon className="h-8 w-8 text-flaskiss-primary" />
+                  <div className="p-3 bg-ghostrootkit-primary/10 rounded-full mb-6">
+                    <feature.icon className="h-8 w-8 text-ghostrootkit-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-flaskiss-text mb-3">
+                  <h3 className="text-xl font-semibold text-ghostrootkit-text mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-flaskiss-muted mb-6">{feature.description}</p>
+                  <p className="text-ghostrootkit-muted mb-6">{feature.description}</p>
                   <div className="mt-auto">
-                    <Button asChild variant="outline" className="border-flaskiss-primary text-flaskiss-primary hover:bg-flaskiss-primary/10">
+                    <Button asChild variant="outline" className="border-ghostrootkit-primary text-ghostrootkit-primary hover:bg-ghostrootkit-primary/10">
                       <Link to="/services">Learn More</Link>
                     </Button>
                   </div>
@@ -91,7 +90,7 @@ const Index = () => {
             </div>
             
             <div className="text-center mt-12">
-              <Button asChild size="lg" className="bg-flaskiss-primary hover:bg-flaskiss-secondary">
+              <Button asChild size="lg" className="bg-ghostrootkit-primary hover:bg-ghostrootkit-secondary">
                 <Link to="/services">View All Services</Link>
               </Button>
             </div>
@@ -102,11 +101,11 @@ const Index = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-flaskiss-text mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-ghostrootkit-text mb-4">
                 What Our Clients Say
               </h2>
-              <p className="text-flaskiss-muted max-w-2xl mx-auto">
-                Hear from businesses that have transformed their digital presence with Flaskiss.
+              <p className="text-ghostrootkit-muted max-w-2xl mx-auto">
+                Hear from businesses that have transformed their digital presence with GhostRootkit.
               </p>
             </div>
             
@@ -114,19 +113,19 @@ const Index = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-flaskiss-light p-8 rounded-xl relative"
+                  className="bg-ghostrootkit-light p-8 rounded-xl relative"
                 >
-                  <div className="absolute top-6 left-6 text-5xl text-flaskiss-primary/20 font-serif">
+                  <div className="absolute top-6 left-6 text-5xl text-ghostrootkit-primary/20 font-serif">
                     "
                   </div>
-                  <p className="relative z-10 italic text-flaskiss-text mb-6">
+                  <p className="relative z-10 italic text-ghostrootkit-text mb-6">
                     {testimonial.quote}
                   </p>
                   <div>
-                    <p className="font-semibold text-flaskiss-text">
+                    <p className="font-semibold text-ghostrootkit-text">
                       {testimonial.author}
                     </p>
-                    <p className="text-flaskiss-muted text-sm">
+                    <p className="text-ghostrootkit-muted text-sm">
                       {testimonial.company}
                     </p>
                   </div>
@@ -137,14 +136,14 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-flaskiss-primary to-flaskiss-accent text-white">
+        <section className="py-20 bg-gradient-to-r from-ghostrootkit-primary to-ghostrootkit-accent text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Power Your Digital World?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Start your journey with Flaskiss AI today and unlock the full potential of your digital presence.
+              Start your journey with GhostRootkit AI today and unlock the full potential of your digital presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-flaskiss-primary hover:bg-gray-100">
+              <Button asChild size="lg" variant="secondary" className="bg-white text-ghostrootkit-primary hover:bg-gray-100">
                 <Link to="/services">Explore Services</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

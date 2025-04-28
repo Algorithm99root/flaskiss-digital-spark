@@ -13,7 +13,7 @@ const TelegramIcon = () => (
     strokeLinecap="round" 
     strokeLinejoin="round"
   >
-    <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.467 1.618 2.665 2.286 3.799.575.972 1.13 1.903 1.596 2.665.226.372.542.778.938.778.411-.001.816-.403.816-.814a.52.52 0 0 0-.052-.19c-.443-.898-1.674-2.665-2.441-3.966 1.863.222 3.829.43 5.896.63a.498.498 0 0 0 .461-.148c.282-.334.438-.777.438-1.182 0-.392-.144-.725-.415-.965a.503.503 0 0 0-.461-.148c-1.297.328-2.857.642-4.412.947-.907-1.892-1.851-3.92-2.665-5.666 1.456-.159 3.092-.329 4.829-.5 2.547-.5 5.093-.999 5.093-.999.447-.091.891-.181 1.336-.22z"/>
+    <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.467 1.618 2.665 2.286 3.799.575.972 1.13 1.903 1.596 2.665.226.372.542.778.938.778.411-.001.816-.403.816-.814a.52.52 0 0 0-.052-.19c-.443-.898-1.674-2.665-2.441-3.966 1.863.222 3.829.43 5.896.63a.498.498 0 0 0 .461-.148c.282-.334.438-.777.438-.182 0-.392-.144-.725-.415-.965a.503.503 0 0 0-.461-.148c-1.297.328-2.857.642-4.412.947-.907-1.892-1.851-3.92-2.665-5.666 1.456-.159 3.092-.329 4.829-.5 2.547-.5 5.093-.999 5.093-.999.447-.091.891-.181 1.336-.22z"/>
   </svg>
 );
 
@@ -54,26 +54,26 @@ const HeroSection = () => {
   return (
     <div className="relative overflow-hidden bg-hero-pattern pt-16 pb-24 md:pt-24 md:pb-32">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 bg-flaskiss-primary/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-flaskiss-accent/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-ghostrootkit-primary/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-ghostrootkit-accent/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-flaskiss-primary to-flaskiss-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-ghostrootkit-primary to-ghostrootkit-accent bg-clip-text text-transparent">
             {displayText}
-            <span className="animate-pulse text-flaskiss-primary">|</span>
+            <span className="animate-pulse text-ghostrootkit-primary">|</span>
           </h1>
-          <p className="text-lg md:text-xl text-flaskiss-text mb-8 leading-relaxed">
-            Flaskiss delivers intelligent AI-driven services for startups, developers, 
+          <p className="text-lg md:text-xl text-ghostrootkit-text mb-8 leading-relaxed">
+            GhostRootkit delivers intelligent AI-driven services for startups, developers, 
             and digital marketers. Unlock the potential of your digital presence with our 
             cutting-edge solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-flaskiss-primary hover:bg-flaskiss-secondary text-white">
+            <Button asChild size="lg" className="bg-ghostrootkit-primary hover:bg-ghostrootkit-secondary text-white">
               <Link to="/services">Explore Services</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-flaskiss-primary text-flaskiss-primary hover:bg-flaskiss-primary/10">
+            <Button asChild size="lg" variant="outline" className="border-ghostrootkit-primary text-ghostrootkit-primary hover:bg-ghostrootkit-primary/10">
               <Link to="/upgrade">Get Started</Link>
             </Button>
           </div>
@@ -125,7 +125,7 @@ const HeroSection = () => {
           
           <div className="mt-8 animate-float">
             <div className="relative w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/30 bg-white/90 backdrop-blur-sm">
-              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-flaskiss-primary/20 to-flaskiss-accent/20 flex items-center px-4">
+              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-ghostrootkit-primary/20 to-ghostrootkit-accent/20 flex items-center px-4">
                 <div className="flex space-x-2">
                   <div className="w-3 h-3 rounded-full bg-red-400"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
@@ -134,14 +134,14 @@ const HeroSection = () => {
               </div>
               <div className="pt-10 pb-6 px-6">
                 <pre className="text-left overflow-x-auto">
-                  <code className="text-sm text-flaskiss-text font-mono">
-                    <span className="text-flaskiss-primary">import</span> Flaskiss <span className="text-flaskiss-primary">from</span> <span className="text-green-600">'flaskiss-ai'</span>;
+                  <code className="text-sm text-ghostrootkit-text font-mono">
+                    <span className="text-ghostrootkit-primary">import</span> GhostRootkit <span className="text-ghostrootkit-primary">from</span> <span className="text-green-600">'flaskiss-ai'</span>;
                     <br /><br />
-                    <span className="text-flaskiss-secondary">// Initialize Flaskiss AI</span>
+                    <span className="text-ghostrootkit-secondary">// Initialize GhostRootkit AI</span>
                     <br />
-                    <span className="text-flaskiss-accent">const</span> ai = <span className="text-flaskiss-primary">new</span> Flaskiss();
+                    <span className="text-ghostrootkit-accent">const</span> ai = <span className="text-ghostrootkit-primary">new</span> GhostRootkit();
                     <br /><br />
-                    <span className="text-flaskiss-secondary">// Power your digital projects</span>
+                    <span className="text-ghostrootkit-secondary">// Power your digital projects</span>
                     <br />
                     ai.optimize({'{'}
                     <br />

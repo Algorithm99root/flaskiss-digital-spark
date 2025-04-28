@@ -5,12 +5,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-flaskiss-dark text-white">
+    <footer className="bg-ghostrootkit-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="text-xl font-bold bg-gradient-to-r from-flaskiss-primary to-flaskiss-accent bg-clip-text text-transparent">
-              Flaskiss
+            <Link to="/" className="text-xl font-bold bg-gradient-to-r from-ghostrootkit-primary to-ghostrootkit-accent bg-clip-text text-transparent">
+              GhostRootkit
             </Link>
             <p className="mt-4 text-sm text-gray-300">
               AI that Powers Your Digital World. Transforming businesses with intelligent SEO optimization, 
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-700 text-sm text-center text-gray-400">
-          <p>&copy; {currentYear} Flaskiss. All rights reserved.</p>
+          <p>&copy; {currentYear} GhostRootkit. All rights reserved.</p>
         </div>
       </div>
     </footer>
