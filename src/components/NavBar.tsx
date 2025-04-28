@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Rocket, Tools } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +11,15 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  // TODO: Backend Integration - Fetch user subscription status
+  // const [isSubscribed, setIsSubscribed] = useState(false);
+  
   const navLinks = [
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
-    { label: "Chat", path: "/chat" },
+    // TODO: Backend Integration - Check user authentication before showing Upgrade
+    { label: "Upgrade", path: "/upgrade", icon: <Rocket className="w-4 h-4" /> },
+    { label: "Free Tools", path: "/tools", icon: <Tools className="w-4 h-4" /> },
     { label: "About", path: "/about" },
   ];
 
@@ -22,6 +27,7 @@ const NavBar = () => {
     <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="font-bold text-2xl bg-gradient-to-r from-flaskiss-primary to-flaskiss-accent bg-clip-text text-transparent">
               Flaskiss
@@ -34,13 +40,15 @@ const NavBar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-flaskiss-text hover:text-flaskiss-primary transition-colors duration-200"
+                className="flex items-center gap-2 text-flaskiss-text hover:text-flaskiss-primary transition-colors duration-200"
               >
+                {link.icon && link.icon}
                 {link.label}
               </Link>
             ))}
+            {/* TODO: Backend Integration - Handle upgrade button visibility based on subscription */}
             <Button className="bg-flaskiss-primary hover:bg-flaskiss-secondary transition-colors">
-              <Link to="/chat">Start a Chat</Link>
+              <Link to="/upgrade">Get Started</Link>
             </Button>
           </div>
 
@@ -63,17 +71,19 @@ const NavBar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="block py-2 text-flaskiss-text hover:text-flaskiss-primary transition-colors duration-200"
+                className="flex items-center gap-2 py-2 text-flaskiss-text hover:text-flaskiss-primary transition-colors duration-200"
                 onClick={toggleMenu}
               >
+                {link.icon && link.icon}
                 {link.label}
               </Link>
             ))}
+            {/* TODO: Backend Integration - Handle mobile upgrade button visibility */}
             <Button 
               className="w-full bg-flaskiss-primary hover:bg-flaskiss-secondary transition-colors"
               onClick={toggleMenu}
             >
-              <Link to="/chat" className="w-full">Start a Chat</Link>
+              <Link to="/upgrade" className="w-full">Get Started</Link>
             </Button>
           </div>
         )}
