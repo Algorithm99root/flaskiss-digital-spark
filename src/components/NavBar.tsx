@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Rocket, Tools } from "lucide-react";
+import { Menu, X, Rocket, Wrench } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const NavBar = () => {
     { label: "Services", path: "/services" },
     // TODO: Backend Integration - Check user authentication before showing Upgrade
     { label: "Upgrade", path: "/upgrade", icon: <Rocket className="w-4 h-4" /> },
-    { label: "Free Tools", path: "/tools", icon: <Tools className="w-4 h-4" /> },
+    { label: "Free Tools", path: "/tools", icon: <Wrench className="w-4 h-4" /> },
     { label: "About", path: "/about" },
   ];
 
