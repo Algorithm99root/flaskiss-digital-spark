@@ -1,8 +1,21 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Telegram } from "lucide-react";
+
+const TelegramIcon = () => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width="24" 
+    height="24" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    fill="none" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.467 1.618 2.665 2.286 3.799.575.972 1.13 1.903 1.596 2.665.226.372.542.778.938.778.411-.001.816-.403.816-.814a.52.52 0 0 0-.052-.19c-.443-.898-1.674-2.665-2.441-3.966 1.863.222 3.829.43 5.896.63a.498.498 0 0 0 .461-.148c.282-.334.438-.777.438-1.182 0-.392-.144-.725-.415-.965a.503.503 0 0 0-.461-.148c-1.297.328-2.857.642-4.412.947-.907-1.892-1.851-3.92-2.665-5.666 1.456-.159 3.092-.329 4.829-.5 2.547-.5 5.093-.999 5.093-.999.447-.091.891-.181 1.336-.22z"/>
+  </svg>
+);
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
@@ -82,13 +95,13 @@ const HeroSection = () => {
                     rel="noopener noreferrer" 
                     className="inline-flex items-center gap-2 bg-white text-[#229ED9] px-4 py-2 rounded-md font-semibold hover:bg-white/90 transition-colors"
                   >
-                    <Telegram className="h-5 w-5" />
+                    <TelegramIcon />
                     Join on Telegram
                   </a>
                 </div>
                 
                 <div className="hidden md:flex items-center justify-center animate-pulse-slow">
-                  <Telegram className="h-24 w-24 text-white/90" />
+                  <TelegramIcon />
                 </div>
               </div>
               
